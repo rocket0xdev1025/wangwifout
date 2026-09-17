@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wangwifout | $wangwifout — The Wildest Gorilla</title>
+    <meta
+      name="description"
+      content="wangwifout is the wildest gorilla with zero head hair—pure chaos, massive vibes, and a moonbound mission. Trade $wangwifout on Solana."
+    />
+    <meta property="og:title" content="wangwifout | $wangwifout" />
+    <meta
+      property="og:description"
+      content="The wildest gorilla with zero head hair—pure chaos, massive vibes, and a moonbound mission."
+    />
+    <meta property="og:image" content="banner.png" />
+    <meta name="theme-color" content="#c2410c" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Outfit:wght@400;500;600;700;800&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fur: {
+                50: "#fff6eb",
+                100: "#ffd9a8",
+                200: "#f5a24d",
+                300: "#ef7a1a",
+                400: "#e05a00",
+                500: "#c2410c",
+                600: "#9a3412",
+                700: "#7c2d12",
+                800: "#431407",
+                900: "#1c0a05",
+              },
+              hide: {
+                400: "#8b5e3c",
+                700: "#3b2416",
+                900: "#140a06",
+              },
+              jungle: {
+                400: "#86efac",
+                500: "#4ade80",
+                700: "#15803d",
+              },
+            },
+            fontFamily: {
+              display: ['"Luckiest Guy"', "cursive"],
+              comic: ["Bangers", "cursive"],
+              stamp: ['"Permanent Marker"', "cursive"],
+              body: ["Outfit", "sans-serif"],
+            },
+            dropShadow: {
+              ape: "0 10px 0 #7c2d12",
+              glow: "0 0 28px rgba(239,122,26,0.65)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --ca: "TBA";
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Outfit, sans-serif;
+        color: #fff6eb;
+        background-color: #1c3d12;
+        background-image: linear-gradient(
+            180deg,
+            rgba(20, 10, 6, 0.55) 0%,
+            rgba(67, 20, 7, 0.45) 40%,
+            rgba(22, 70, 20, 0.5) 100%
+          ),
+          url("field.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center bottom;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-attachment: scroll;
+        }
+      }
+
+      .noise::before {
+        content: "";
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        opacity: 0.08;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      .wood {
+        background: linear-gradient(160deg, #7a3e16 0%, #4a230e 55%, #2b1408 100%);
+        box-shadow: inset 0 1px 0 rgba(255, 214, 160, 0.25), 0 14px 0 #1a0a04,
+          0 22px 40px rgba(0, 0, 0, 0.35);
+        border: 3px solid #f5a24d;
+      }
+
+      .btn-ape {
+        background: linear-gradient(180deg, #ff9a3c 0%, #ef7a1a 38%, #c2410c 100%);
+        box-shadow: 0 6px 0 #7c2d12, 0 12px 24px rgba(0, 0, 0, 0.35);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .btn-ape:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 0 #7c2d12, 0 16px 28px rgba(0, 0, 0, 0.4);
+      }
+
+      .btn-ape:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #7c2d12;
+      }
+
+      .btn-chart {
+        background: linear-gradient(180deg, #5eead4 0%, #14b8a6 45%, #0f766e 100%);
+        box-shadow: 0 6px 0 #115e59, 0 12px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      .btn-chart:hover {
+        transform: translateY(-2px);
+      }
+
+      .float-slow {
+        animation: float 4.5s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+
+      .wiggle {
+        animation: wiggle 2.8s ease-in-out infinite;
+      }
+
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(-2deg);
+        }
+        50% {
+          transform: rotate(2deg);
+        }
+      }
+
+      .marquee {
+        animation: marquee 28s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .glow-ring {
+        box-shadow: 0 0 0 6px rgba(239, 122, 26, 0.35), 0 0 50px rgba(239, 122, 26, 0.55);
+      }
+
+      .stamp {
+        text-shadow: 4px 4px 0 #7c2d12, 8px 8px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      .step-num {
+        text-shadow: 3px 3px 0 #7c2d12;
+      }
+    </style>
+  </head>
+  <body class="noise font-body antialiased overflow-x-hidden">
+    <div class="relative z-10">
+      <header class="fixed top-0 inset-x-0 z-50">
+        <nav
+          class="mx-auto mt-3 flex max-w-6xl items-center justify-between gap-3 rounded-full border-2 border-fur-200/80 bg-hide-900/80 px-3 py-2 shadow-[0_10px_0_#7c2d12] backdrop-blur-md sm:px-5"
+        >
+          <a href="#top" class="flex items-center gap-2">
+            <img
+              src="logo.png"
+              alt="wangwifout logo"
+              class="h-11 w-11 rounded-full border-2 border-fur-200 object-cover"
+            />
+            <span class="font-display text-xl tracking-wide text-fur-100 sm:text-2xl"
+              >wangwifout</span
+            >
+          </a>
+          <div class="hidden items-center gap-6 text-sm font-bold uppercase tracking-widest md:flex">
+            <a href="#about" class="hover:text-fur-200">About</a>
+            <a href="#howtobuy" class="hover:text-fur-200">How to Buy</a>
+            <a href="#chart" class="hover:text-fur-200">Chart</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://t.me/wangwifout"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-white/10 p-1 hover:scale-110 transition"
+              aria-label="Telegram"
+            >
+              <img src="tg.png" alt="Telegram" class="h-8 w-8 rounded-full" />
+            </a>
+            <a
+              href="https://x.com/wangwifout"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-white p-1 hover:scale-110 transition"
+              aria-label="Twitter / X"
+            >
+              <img src="x.png" alt="X" class="h-8 w-8 rounded-full object-contain" />
+            </a>
+            <a
+              href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ape hidden rounded-full px-4 py-2 font-display text-lg tracking-wide text-white sm:inline-block"
+              >Buy Now</a
+            >
+            <button
+              id="menuBtn"
+              class="rounded-full border-2 border-fur-200 px-3 py-1 font-display text-lg md:hidden"
+              aria-label="Open menu"
+            >
+              MENU
+            </button>
+          </div>
+        </nav>
+        <div
+          id="mobileMenu"
+          class="mx-auto mt-2 hidden max-w-6xl flex-col gap-2 rounded-3xl border-2 border-fur-200 bg-hide-900/95 p-4 font-bold uppercase tracking-widest md:hidden"
+        >
+          <a href="#about">About</a>
+          <a href="#howtobuy">How to Buy</a>
+          <a href="#chart">Chart</a>
+          <a
+            href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-ape mt-2 rounded-full px-4 py-3 text-center font-display tracking-wide"
+            >Buy Now</a
+          >
+        </div>
+      </header>
+
+      <main id="top" class="pt-28 sm:pt-32">
+        <section class="relative mx-auto max-w-6xl px-4 pb-10">
+          <div class="relative overflow-hidden rounded-[2rem] border-4 border-fur-200 wood">
+            <img
+              src="banner.png"
+              alt="wangwifout banner — bald gorilla in a green field launching to the moon"
+              class="h-[42vh] min-h-[280px] w-full object-cover sm:h-[52vh]"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-hide-900 via-hide-900/20 to-transparent"
+            ></div>
+            <div class="absolute left-4 top-4 wiggle rounded-2xl bg-fur-500 px-4 py-2 shadow-[4px_4px_0_#1a0a04] sm:left-8 sm:top-8">
+              <p class="font-stamp text-sm text-white sm:text-lg">ZERO HEAD HAIR</p>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8">
+              <p class="font-stamp text-fur-100">$wangwifout • Solana</p>
+              <h1 class="stamp font-display text-5xl leading-none text-white sm:text-7xl lg:text-8xl">
+                WANGWIFOUT
+              </h1>
+            </div>
+          </div>
+
+          <div class="mt-8 grid items-center gap-8 lg:grid-cols-[280px_1fr]">
+            <div class="mx-auto float-slow">
+              <img
+                src="logo.png"
+                alt="wangwifout gorilla logo"
+                class="glow-ring h-56 w-56 rounded-[2rem] border-4 border-fur-200 object-cover sm:h-64 sm:w-64"
+              />
+            </div>
+            <div>
+              <p class="font-comic text-3xl text-fur-100 sm:text-4xl">
+                wangwifout is the wildest gorilla with zero head hair—pure chaos, massive vibes, and
+                a moonbound mission.
+              </p>
+              <p class="mt-4 max-w-2xl text-lg text-fur-50/90">
+                No hair. No brakes. Just an orange ape stamped on Solana, charging the field with
+                chaos energy and a one-way ticket to the moon.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-ape rounded-full px-8 py-4 font-display text-2xl tracking-wide text-white"
+                  >Buy Now</a
+                >
+                <a
+                  href="https://dexscreener.com/solana/TBA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-chart rounded-full px-8 py-4 font-display text-2xl tracking-wide text-white"
+                  >Chart</a
+                >
+              </div>
+
+              <div class="mt-6 wood rounded-2xl p-3 sm:p-4">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.3em] text-fur-200">
+                      Contract Address
+                    </p>
+                    <p id="caText" class="break-all font-mono text-sm text-white sm:text-base">TBA</p>
+                  </div>
+                  <button
+                    id="copyCa"
+                    class="btn-ape rounded-full px-5 py-2 font-display text-xl tracking-wide text-white"
+                  >
+                    Copy CA
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="relative my-8 overflow-hidden border-y-4 border-fur-200 bg-fur-500 py-3">
+          <div class="marquee flex w-max gap-10 whitespace-nowrap font-display text-2xl tracking-wide">
+            <span>WANGWIFOUT</span><span>$WANGWIFOUT</span><span>ZERO HEAD HAIR</span>
+            <span>PURE CHAOS</span><span>MASSIVE VIBES</span><span>MOONBOUND MISSION</span>
+            <span>WILD ORANGE APE</span><span>SOLANA JUNGLE</span>
+            <span>WANGWIFOUT</span><span>$WANGWIFOUT</span><span>ZERO HEAD HAIR</span>
+            <span>PURE CHAOS</span><span>MASSIVE VIBES</span><span>MOONBOUND MISSION</span>
+            <span>WILD ORANGE APE</span><span>SOLANA JUNGLE</span>
+          </div>
+        </div>
+
+        <section id="about" class="mx-auto max-w-6xl px-4 py-16">
+          <h2 class="stamp text-center font-display text-5xl text-white sm:text-6xl">The Legend</h2>
+          <p class="mx-auto mt-4 max-w-3xl text-center text-lg text-fur-50/90">
+            Born bald. Built different. wangwifout is the orange gorilla that walked out of the
+            field, looked at the moon, and decided hair was optional but chaos was mandatory.
+          </p>
+          <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="wood rounded-3xl p-6 text-center">
+              <p class="font-display text-4xl text-fur-200">01</p>
+              <h3 class="mt-2 font-comic text-2xl">Zero Head Hair</h3>
+              <p class="mt-2 text-sm text-fur-50/80">
+                Smooth dome. Maximum aura. The baldest gorilla in the jungle.
+              </p>
+            </article>
+            <article class="wood rounded-3xl p-6 text-center">
+              <p class="font-display text-4xl text-fur-200">02</p>
+              <h3 class="mt-2 font-comic text-2xl">Pure Chaos</h3>
+              <p class="mt-2 text-sm text-fur-50/80">
+                Unfiltered ape energy. No roadmap. Just vibes and velocity.
+              </p>
+            </article>
+            <article class="wood rounded-3xl p-6 text-center">
+              <p class="font-display text-4xl text-fur-200">03</p>
+              <h3 class="mt-2 font-comic text-2xl">Massive Vibes</h3>
+              <p class="mt-2 text-sm text-fur-50/80">
+                Field-born, moon-bound, community-charged. Join the troop.
+              </p>
+            </article>
+            <article class="wood rounded-3xl p-6 text-center">
+              <p class="font-display text-4xl text-fur-200">04</p>
+              <h3 class="mt-2 font-comic text-2xl">Moonbound</h3>
+              <p class="mt-2 text-sm text-fur-50/80">
+                Rocket packed. Sign planted. $wangwifout does not look back.
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border-2 border-fur-200 bg-hide-900/70 p-5 text-center backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.25em] text-fur-200">Name</p>
+              <p class="mt-1 font-display text-3xl">wangwifout</p>
+            </div>
+            <div class="rounded-2xl border-2 border-fur-200 bg-hide-900/70 p-5 text-center backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.25em] text-fur-200">Symbol</p>
+              <p class="mt-1 font-display text-3xl">$wangwifout</p>
+            </div>
+            <div class="rounded-2xl border-2 border-fur-200 bg-hide-900/70 p-5 text-center backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.25em] text-fur-200">Chain</p>
+              <p class="mt-1 font-display text-3xl">Solana</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="howtobuy" class="mx-auto max-w-6xl px-4 py-16">
+          <h2 class="stamp text-center font-display text-5xl text-white sm:text-6xl">How to Buy</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-fur-50/90">
+            Four steps. One gorilla. Grab SOL and ape into $wangwifout.
+          </p>
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="wood relative overflow-hidden rounded-3xl p-7">
+              <span class="step-num font-display text-7xl text-fur-300/80">1</span>
+              <h3 class="mt-2 font-comic text-3xl">Get a Solana Wallet</h3>
+              <p class="mt-3 text-fur-50/90">
+                Download Phantom or Solflare. Create a wallet and back up your seed like a gorilla
+                guards bananas — this is your jungle backpack.
+              </p>
+            </article>
+            <article class="wood relative overflow-hidden rounded-3xl p-7">
+              <span class="step-num font-display text-7xl text-fur-300/80">2</span>
+              <h3 class="mt-2 font-comic text-3xl">Load It With SOL</h3>
+              <p class="mt-3 text-fur-50/90">
+                Buy SOL on any major exchange, then send it to your wallet. SOL is the fuel that
+                gets wangwifout off the field.
+              </p>
+            </article>
+            <article class="wood relative overflow-hidden rounded-3xl p-7">
+              <span class="step-num font-display text-7xl text-fur-300/80">3</span>
+              <h3 class="mt-2 font-comic text-3xl">Open the Swap</h3>
+              <p class="mt-3 text-fur-50/90">
+                Smash <span class="font-bold text-fur-200">Buy Now</span> to hit Pump.fun, or paste
+                the contract address. Connect your wallet and keep SOL as the input.
+              </p>
+            </article>
+            <article class="wood relative overflow-hidden rounded-3xl p-7">
+              <span class="step-num font-display text-7xl text-fur-300/80">4</span>
+              <h3 class="mt-2 font-comic text-3xl">Swap For $wangwifout</h3>
+              <p class="mt-3 text-fur-50/90">
+                Swap SOL for $wangwifout, confirm the transaction, and hold with the troop. Welcome
+                to zero head hair, pure chaos, and a moonbound mission.
+              </p>
+            </article>
+          </div>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ape rounded-full px-8 py-4 font-display text-2xl tracking-wide text-white"
+              >Buy Now</a
+            >
+            <button
+              id="copyCaAlt"
+              class="rounded-full border-4 border-fur-200 bg-hide-900/80 px-8 py-4 font-display text-2xl tracking-wide"
+            >
+              Copy CA
+            </button>
+          </div>
+        </section>
+
+        <section id="chart" class="mx-auto max-w-6xl px-4 py-16">
+          <h2 class="stamp text-center font-display text-5xl text-white sm:text-6xl">Live Chart</h2>
+          <p class="mx-auto mt-4 mb-8 max-w-2xl text-center text-lg text-fur-50/90">
+            Watch the chaos print in real time. Chart goes live the second $wangwifout hits the
+            field.
+          </p>
+          <div class="overflow-hidden rounded-[2rem] border-4 border-fur-200 bg-hide-900/80 shadow-[0_16px_0_#7c2d12]">
+            <iframe
+              title="Dexscreener chart for wangwifout"
+              src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+              class="h-[420px] w-full sm:h-[560px]"
+            ></iframe>
+          </div>
+          <div class="mt-6 text-center">
+            <a
+              href="https://dexscreener.com/solana/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-chart inline-block rounded-full px-8 py-4 font-display text-2xl tracking-wide text-white"
+              >Open Dexscreener</a
+            >
+          </div>
+        </section>
+
+        <section id="troop" class="mx-auto max-w-6xl px-4 py-16">
+          <div class="wood rounded-[2rem] px-6 py-12 text-center sm:px-12">
+            <h2 class="stamp font-display text-5xl sm:text-6xl">Join The Troop</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg text-fur-50/90">
+              wangwifout is the wildest gorilla with zero head hair—pure chaos, massive vibes, and a
+              moonbound mission. Come scream with us.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-6">
+              <a
+                href="https://t.me/wangwifout"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-full bg-sky-500 px-6 py-3 font-display text-2xl tracking-wide shadow-[0_6px_0_#0369a1] hover:-translate-y-1 transition"
+              >
+                <img src="tg.png" alt="" class="h-10 w-10 rounded-full" />
+                Telegram
+              </a>
+              <a
+                href="https://x.com/wangwifout"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-full bg-black px-6 py-3 font-display text-2xl tracking-wide shadow-[0_6px_0_#111] hover:-translate-y-1 transition"
+              >
+                <img src="x.png" alt="" class="h-10 w-10 rounded-full bg-white p-1 object-contain" />
+                Twitter
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t-4 border-fur-200 bg-hide-900/90 py-8 text-center">
+        <img src="logo.png" alt="" class="mx-auto h-16 w-16 rounded-full border-2 border-fur-200" />
+        <p class="mt-3 font-display text-2xl">wangwifout • $wangwifout</p>
+        <p class="mt-1 text-sm text-fur-100/70">
+          Meme coin. Not financial advice. Ape at your own risk.
+        </p>
+        <p class="mt-4 text-xs uppercase tracking-[0.3em] text-fur-200">© 2026 wangwifout</p>
+      </footer>
+    </div>
+
+    <div
+      id="toast"
+      class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-jungle-500 px-6 py-3 font-display text-xl text-hide-900 opacity-0 shadow-lg transition"
+    >
+      CA copied.
+    </div>
+
+    <script>
+      const CA = "TBA";
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const toast = document.getElementById("toast");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+        });
+      });
+
+      async function copyCa() {
+        try {
+          await navigator.clipboard.writeText(CA);
+        } catch (err) {
+          const input = document.createElement("textarea");
+          input.value = CA;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand("copy");
+          input.remove();
+        }
+        toast.classList.remove("opacity-0");
+        toast.classList.add("opacity-100");
+        setTimeout(() => {
+          toast.classList.add("opacity-0");
+          toast.classList.remove("opacity-100");
+        }, 1800);
+      }
+
+      document.getElementById("copyCa").addEventListener("click", copyCa);
+      document.getElementById("copyCaAlt").addEventListener("click", copyCa);
+    </script>
+  </body>
+</html>
